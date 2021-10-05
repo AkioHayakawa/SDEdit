@@ -26,6 +26,8 @@ def parse_args_and_config():
     parser.add_argument('--npy_name', type=str, required=True)
     parser.add_argument('--sample_step', type=int, default=3, help='Total sampling steps')
     parser.add_argument('--t', type=int, default=400, help='Sampling noise scale')
+    parser.add_argument('--image_path', type=str, default=None)
+    parser.add_argument('--gif_interval', type=int, default=20)
     args = parser.parse_args()
 
     # parse config file

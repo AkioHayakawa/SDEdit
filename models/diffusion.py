@@ -117,7 +117,7 @@ class ResnetBlock(nn.Module):
         h = self.norm1(h)
         h = nonlinearity(h)
         h = self.conv1(h)
-
+        
         h = h + self.temb_proj(nonlinearity(temb))[:, :, None, None]
 
         h = self.norm2(h)
